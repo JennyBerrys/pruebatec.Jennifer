@@ -12,17 +12,19 @@
 
         <form id="userForm">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required><br>
+            <input type="text" id="nombre" required>
+            <div id="errorNombre" class="error-message"></div><br>
 
-            <label for="rut">RUT (sin puntos, con guion):</label>
-            <input type="text" id="rut" required pattern="\d{1,8}-[\dkK]"><br>
+            <label for="rut">RUT (formato: 12.345.678-9):</label>
+            <input type="text" id="rut" required>
+            <div id="errorRut" class="error-message"></div><br>
 
             <button type="button" onclick="generarCredenciales()">Generar</button>
         </form>
 
-        <h3>Resultado:</h3>
+        <h3>Resultado</h3>
         <p id="resultadoUsuario">Tu usuario es: </p>
-        <p id="resultadoContraseña">Contraseña: </p>
+        <p id="resultadoContraseña">Tu Contraseña es: </p>
     </div>
 
     <script src="script.js"></script>
