@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Usuario y Contraseña</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de Usuario y Contraseña</h2>
+
+        <form id="userForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required><br>
+
+            <label for="rut">RUT (sin puntos, con guion):</label>
+            <input type="text" id="rut" required pattern="\d{1,8}-[\dkK]"><br>
+
+            <button type="button" onclick="generarCredenciales()">Generar</button>
+        </form>
+
+        <h3>Resultado:</h3>
+        <p id="resultadoUsuario">Tu usuario es: </p>
+        <p id="resultadoContraseña">Contraseña: </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
